@@ -5,9 +5,9 @@ import {
   FETCH_ROBOTS_FAILD
 } from './actionType';
 
-const initialStateSearch = JSON.parse(`{
-  "searchFields": ""
-}`);
+const initialStateSearch = {
+  searchFields: ''
+};
 
 export const searchReducer = (state = initialStateSearch, action = {}) => {
   switch (action.type) {
@@ -22,11 +22,11 @@ export const searchReducer = (state = initialStateSearch, action = {}) => {
   }
 };
 
-const initialStateFetchRobots = JSON.parse(`{
-  "robots": [],
-  "isPiending": false,
-  "error": ""
-}`);
+const initialStateFetchRobots = {
+  robots: [],
+  isPiending: false,
+  error: ''
+};
 
 export const fetchRobotsReducer = (
   state = initialStateFetchRobots,
